@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Logo.jpg">
+    <title>Leave App</title>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;  /* Allow wrapping on small screens */
+            min-height: 100vh;
+            padding: 20px; /* Add padding for better spacing */
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 420px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-top: 4px solid #007bff;
+            width: 100%; /* Full width for small screens */
+        }
+
+        h2 {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Form Styling */
+        form {
+            text-align: left;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 6px;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+            background: #fff;
+            box-shadow: 0px 0px 6px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Button Styling */
+        button {
+            background: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Additional Section */
+        .creating {
+            height: auto;
+            width: 100%; /* Full width on mobile */
+            max-width: 500px;
+            background-color: #0056b3;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #007bff;
+            padding: 20px;
+            margin-top: 20px; /* Add spacing */
+            text-align: center;
+        }
+
+        p {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container, .creating {
+                max-width: 100%; /* Make it fit smaller screens */
+                padding: 20px;
+            }
+            input, select, button {
+                font-size: 14px; /* Adjust font size */
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Leave Application</h2>
+    <form>
+        <label for="school">School Name</label>
+        <input type="text" id="school" placeholder="Enter your school name" required>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+
+        <label for="class">Class</label>
+        <input type="number" id="class" placeholder="Enter your class" required>
+
+        <label for="roll">Roll Number</label>
+        <input type="number" id="roll" placeholder="Enter your roll number" required>
+
+        <label for="date">Date</label>
+        <input type="date" id="date" required>
+
+        <label for="days">No. of days for leave</label>
+        <input type="number" id="days" required placeholder="No. of days for leave">
+
+        <label for="reason">Reason for Leave</label>
+        <input type="text" id="reason" placeholder="Enter reason here...">
+
+        <button type="submit" id="btn">Submit Application</button>
+    </form>
+</div>
+
+<div class="creating">
+    <p id="para"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
